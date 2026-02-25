@@ -9,16 +9,22 @@
 El proyecto está organizado en **fases incrementales** para mantener el historial completo de aprendizaje:
 
 ```
-agente-basico/
-├── fase-1-fundamentos/     ✅ COMPLETADO
+building-ai-agents/
+├── fase-1-fundamentos/     ✅ COMPLETADO (4 archivos)
 │   ├── README.md           → Guía de la fase
 │   ├── 01_basico.py
 │   ├── 02_con_tools.py
 │   ├── 03_agente_loop.py
 │   └── 04_agente_completo.py
 │
-├── fase-2-langgraph/       🎯 EN PROGRESO
-│   └── README.md           → Qué aprenderemos
+├── fase-2-langgraph/       ✅ COMPLETADO (6 archivos)
+│   ├── README.md           → Guía de la fase
+│   ├── 01_state_graph_basico.py
+│   ├── 02_agente_con_tools.py
+│   ├── 03_checkpointing.py
+│   ├── 04_human_in_loop.py
+│   ├── 05_streaming.py
+│   └── 06_subgrafos.py
 │
 ├── fase-3-langchain/       📅 PRÓXIMAMENTE
 │   └── README.md
@@ -47,14 +53,19 @@ agente-basico/
 
 | Fase | Estado | Archivos | Conceptos Clave |
 |------|--------|----------|-----------------|
-| **1. Fundamentos** | ✅ Completado | 4 | SDK Claude, Tools, Agentic Loop |
-| **2. LangGraph** | 🎯 En progreso | 0/6 | StateGraph, Checkpointing, Grafos |
-| **3. LangChain** | 📅 Pendiente | 0/6 | LCEL, Chains, Interoperabilidad |
+| **1. Fundamentos** | ✅ Completado | 4/4 | SDK Claude, Tools, Agentic Loop |
+| **2. LangGraph** | ✅ Completado | 6/6 | StateGraph, Checkpointing, Grafos, Subgrafos |
+| **3. LangChain** | 🎯 Siguiente | 0/6 | LCEL, Chains, Interoperabilidad |
 | **4. RAG** | 📅 Pendiente | 0/6 | Embeddings, Vector DB, Retrieval |
 | **5. Producción** | 📅 Pendiente | 0/8 | FastAPI, Docker, Deploy, MLOps |
 
 ### 🎯 Próximo Milestone
-**Fase 2: LangGraph** - Construir agentes con grafos de estado para mejor control y visualización.
+**Fase 3: LangChain** - Migrar a LangChain SDK para mayor interoperabilidad y acceso a 100+ integraciones.
+
+### 📊 Progreso Actual
+- ✅ **Fase 1:** 4 archivos, ~300 líneas - Fundamentos del SDK
+- ✅ **Fase 2:** 6 archivos, ~2,112 líneas - LangGraph completo
+- **Total:** 10 archivos, ~2,400 líneas de código educativo
 
 ---
 
@@ -78,6 +89,20 @@ uv run python fase-1-fundamentos/01_basico.py
 uv run python fase-1-fundamentos/02_con_tools.py
 uv run python fase-1-fundamentos/03_agente_loop.py
 uv run python fase-1-fundamentos/04_agente_completo.py
+```
+
+### Ejecutar Fase 2 (LangGraph) ✨ NUEVO
+```bash
+# Cargar variables de entorno
+export $(cat .env | xargs)
+
+# Ejecutar ejemplos de LangGraph
+uv run python fase-2-langgraph/01_state_graph_basico.py
+uv run python fase-2-langgraph/02_agente_con_tools.py
+uv run python fase-2-langgraph/03_checkpointing.py
+uv run python fase-2-langgraph/04_human_in_loop.py
+uv run python fase-2-langgraph/05_streaming.py
+uv run python fase-2-langgraph/06_subgrafos.py
 ```
 
 ### Ver Guía de Cada Fase
